@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <HeaderComponent :header='header.toLocaleUpperCase()' />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
 
 export default Vue.extend({
   name: 'app',
   components: {
-    HelloWorld
+    HeaderComponent
+  },
+  data () {
+    return {
+      header: 'ToDo List'
+    }
   }
 })
 </script>
@@ -25,5 +29,9 @@ export default Vue.extend({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+input {
+  text-align: center;
 }
 </style>
