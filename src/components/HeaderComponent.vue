@@ -1,21 +1,20 @@
 <template>
     <div>
         <img alt="Vue logo" src="../assets/logo.png">
-        <h1>{{ header }}</h1>
-        <input type="text" v-model="header">
+        <h1>{{ headerProp }}</h1>
     </div>
 </template>
 
 <script>
 import Vue from 'vue'
 
-export default {
-  name: 'header',
+export default Vue.extend({
+  name: 'HeaderComponent',
   props: {
-    header: {
+    headerProp: {
       type: String,
       required: true
     }
   }
-}
+})
 </script>

@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <HeaderComponent :header='header.toLocaleUpperCase()' />
+    <HeaderComponent :headerProp='header' />
+    <FormComponent v-model="header" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import HeaderComponent from './components/HeaderComponent.vue'
+import FormComponent from './components/FormComponent.vue'
 
 export default Vue.extend({
   name: 'app',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    FormComponent
   },
   data () {
     return {
